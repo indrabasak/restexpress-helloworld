@@ -1,19 +1,29 @@
+[![Build Status][travis-badge]][travis-badge-url]
+
 RestExpress Hello World Example
 ===================
 This is  a simple **Customer Service** example using [**RestExpress**](https://github.com/RestExpress/RestExpress). RestExpress is a Java REST framework based on [**Netty**](http://netty.io/). 
 
-----------
+# Build
+Execute the following command from the parent directory to compile the project:
 
-#### To Compile the project
-> mvn clean package
+```
+mvn clean package
+```
+Once the build completes successfully, you should have the artifact `restexpress-helloworld-1.0.jar` in the `target` folder.
 
-#### To Run the project
-> java -jar restexpress-helloworld-1.0.jar
+# Run from Command Line
+To run the JAR from command line:
+```
+java -jar restexpress-helloworld-1.0.jar
+```
 
-#### To Run from Eclipse IDE
+# Run from Eclipse IDE
 Run **CustomerMain** class as Java Application
 
-#### Testing GET operation
+# Test
+
+#### GET Operation
 URL: http://localhost:9000/customers/1
 HTTP Method: GET
 Header: Accept: application/json
@@ -31,7 +41,7 @@ Header: Accept: application/json
       }
     }
 
-####  Testing POST operation 
+####  POST Operation 
 URL: http://localhost:9000/customers
 HTTP Method: POST
 Header: 
@@ -65,7 +75,7 @@ Expected Response Body:
           }
         }
 
-#### Testing DELETE operation 
+#### DELETE Operation 
 URL: http://localhost:9000/customers/4
 HTTP Method: POST
 Header: 
@@ -86,7 +96,7 @@ Expected Response Body:
       }
     }
 
-#### Testing UPDATE operation 
+#### UPDATE Operation 
 URL: http://localhost:9000/customers/1
 HTTP Method: PUT
 Header: 
@@ -119,7 +129,7 @@ Expected Response Body:
       }
     }
 
-#### Testing PARTIAL UPDATE operation 
+#### PARTIAL UPDATE Operation 
 URL: http://localhost:9000/customers/1
 HTTP Method: PATCH
 Header: 
@@ -144,3 +154,6 @@ Expected Response Body:
         "zipCode" : "22980"
       }
     }
+    
+ [travis-badge]: https://travis-ci.org/indrabasak/restexpress-helloworld.svg?branch=master
+ [travis-badge-url]: https://travis-ci.org/indrabasak/restexpress-helloworld/  
