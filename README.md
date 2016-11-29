@@ -24,136 +24,145 @@ Run **CustomerMain** class as Java Application
 # Test
 
 #### GET Operation
-URL: http://localhost:9000/customers/1
+URL: `http://localhost:9000/customers/1`
 HTTP Method: GET
 Header: Accept: application/json
 
-    Expected Response Body:
-    {
-      "id" : 1,
-      "firstName" : "Robert",
-      "lastName" : "Land",
-      "address" : {
-        "street" : "2486 Maxwell Farm Road",
-        "city" : "Waynesboro",
-        "state" : "VA",
-        "zipCode" : "22980"
-      }
-    }
+Expected Response Body:
+```json
+{
+  "id" : 1,
+  "firstName" : "Robert",
+  "lastName" : "Land",
+  "address" : {
+    "street" : "2486 Maxwell Farm Road",
+    "city" : "Waynesboro",
+    "state" : "VA",
+    "zipCode" : "22980"
+  }
+}
+```    
 
 ####  POST Operation 
-URL: http://localhost:9000/customers
+URL: `http://localhost:9000/customers`
 HTTP Method: POST
 Header: 
 Content-Type: application/json
 Accept: application/json
 
 Request Body:
-
-    {
-      "firstName" : "John",
-      "lastName" : "Doe",
-      "address" : {
-        "street" : "123 Nowhere Street",
-        "city" : "Notown",
-        "state" : "MA",
-        "zipCode" : "02456"
-      }
-    }
+```json
+{
+  "firstName" : "John",
+  "lastName" : "Doe",
+  "address" : {
+    "street" : "123 Nowhere Street",
+    "city" : "Notown",
+    "state" : "MA",
+    "zipCode" : "02456"
+  }
+}
+```
 
 Expected Response Body:
-
-    {
-          "id" : 4,
-          "firstName" : "John",
-          "lastName" : "Doe",
-          "address" : {
-            "street" : "123 Nowhere Street",
-            "city" : "Notown",
-            "state" : "MA",
-            "zipCode" : "02456"
-          }
-        }
+```json
+{
+  "id" : 4,
+  "firstName" : "John",
+  "lastName" : "Doe",
+  "address" : {
+    "street" : "123 Nowhere Street",
+    "city" : "Notown",
+    "state" : "MA",
+    "zipCode" : "02456"
+  }
+}
+```
 
 #### DELETE Operation 
-URL: http://localhost:9000/customers/4
+URL: `http://localhost:9000/customers/4`
 HTTP Method: POST
 Header: 
 Content-Type: application/json
 Accept: application/json
 
 Expected Response Body:
-
-    {
-      "id" : 4,
-      "firstName" : "John",
-      "lastName" : "Doe",
-      "address" : {
-        "street" : "123 Nowhere Street",
-        "city" : "Notown",
-        "state" : "MA",
-        "zipCode" : "02456"
-      }
-    }
+```json
+{
+  "id" : 4,
+  "firstName" : "John",
+  "lastName" : "Doe",
+  "address" : {
+    "street" : "123 Nowhere Street",
+    "city" : "Notown",
+    "state" : "MA",
+    "zipCode" : "02456"
+  }
+}
+```
 
 #### UPDATE Operation 
-URL: http://localhost:9000/customers/1
+URL: `http://localhost:9000/customers/1`
 HTTP Method: PUT
 Header: 
 Content-Type: application/json
 Accept: application/json
 Request Body:
-
-    {
-      "firstName" : "Robert",
-      "lastName" : "Redford",
-      "address" : {
-        "street" : "2486 Maxwell Farm Road",
-        "city" : "Waynesboro",
-        "state" : "VA",
-        "zipCode" : "22980"
-      }
-    }
+```json
+{
+  "firstName" : "Robert",
+  "lastName" : "Redford",
+  "address" : {
+    "street" : "2486 Maxwell Farm Road",
+    "city" : "Waynesboro",
+    "state" : "VA",
+    "zipCode" : "22980"
+  }
+}
+```
 
 Expected Response Body:
-
-    {
-      "id" : 1,
-      "firstName" : "Robert",
-      "lastName" : "Redford",
-      "address" : {
-        "street" : "2486 Maxwell Farm Road",
-        "city" : "Waynesboro",
-        "state" : "VA",
-        "zipCode" : "22980"
-      }
-    }
+```json
+{
+  "id" : 1,
+  "firstName" : "Robert",
+  "lastName" : "Redford",
+  "address" : {
+    "street" : "2486 Maxwell Farm Road",
+    "city" : "Waynesboro",
+    "state" : "VA",
+    "zipCode" : "22980"
+  }
+}
+```
 
 #### PARTIAL UPDATE Operation 
-URL: http://localhost:9000/customers/1
+URL: `http://localhost:9000/customers/1`
 HTTP Method: PATCH
 Header: 
 Content-Type: application/json
 Accept: application/json
 
-    Request Body:
-    {
-      "firstName" : "John",
-    }
-
+Request Body:
+```json
+{
+  "firstName" : "John"
+}
+```
 Expected Response Body:
-
-    {
-      "id" : 1,
-      "firstName" : "John",
-      "lastName" : "Redford",
-      "address" : {
-        "street" : "2486 Maxwell Farm Road",
-        "city" : "Waynesboro",
-        "state" : "VA",
-        "zipCode" : "22980"
-      }
-    }
+```json
+{
+  "id" : 1,
+  "firstName" : "John",
+  "lastName" : "Redford",
+  "address" : {
+    "street" : "2486 Maxwell Farm Road",
+    "city" : "Waynesboro",
+    "state" : "VA",
+    "zipCode" : "22980"
+  }
+}
+```
     
  [travis-badge]: https://travis-ci.org/indrabasak/restexpress-helloworld.svg?branch=master
  [travis-badge-url]: https://travis-ci.org/indrabasak/restexpress-helloworld/  
